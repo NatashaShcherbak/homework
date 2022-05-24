@@ -13,15 +13,15 @@ function Car() {
     this.show = function () {
         console.log(this);
     }
-    this.getUser = function () {
-        this.owner = new User();
-        return this.owner.infoUser();
+    this.setUser = function () {
+        this.owner = user;
+        return this.owner;
     }
 }
 function onClickCar() {
     let car = new Car;
     car.info();
     car.show();
-    car.getUser();
+    car.setUser();
 }
 

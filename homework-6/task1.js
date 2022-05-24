@@ -11,8 +11,9 @@ function User() {
         console.log(this);
     }
 }
+let user;
 function onClickUser() {
-    let user = new User();
+    user = new User;
     user.infoUser();
     user.show();
 }
