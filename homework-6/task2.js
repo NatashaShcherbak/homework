@@ -1,27 +1,27 @@
-function getCar() {
-    function Car() {
-        this.name = prompt('Введите марку машины');
-        this.year = prompt('Введите год выпуска машины');
-        this.color = prompt('Введите цвет машины');
-        this.show = function () {
-            if (this.name === '' || this.name === null) {
-                alert('error - имя');
-            } else if (this.year === '' || this.year === null || !isFinite(+this.year)) {
-                alert('error - год');
-            } else if (this.color === '' || this.color === null) {
-                alert('error - цвет');
-            } else {
-                alert(this.name + ' ' + this.year + ' ' + this.color + ' ' + this.owner.firstname + ' ' + this.owner.lastname);
-            }
-        }
-        this.info = function () {
-            console.log(this);
-        }
+function Car() {
+    this.name = prompt('Введите марку машины');
+    this.year = prompt('Введите год выпуска машины');
+    this.color = prompt('Введите цвет машины');
+    this.checkName = this.name === '' || this.name === null;
+    this.checkYear = this.year === '' || this.year === null || !isFinite(+this.year) || this.year > 2022;
+    this.checkColor = this.color === '' || this.color === null;
+    this.info = function () {
+        if (this.checkName) this.name = 'ERROR';
+        if (this.checkYear) this.year = 'ERROR';
+        if (this.checkColor) this.color = 'ERROR';
     }
-    let car = new Car;
-    car.owner = {}
-    car.owner.lastname = 'Александр';
-    car.owner.firstname = 'Иванов';
-    car.show();
-    car.info();
+    this.show = function () {
+        console.log(this);
+    }
+    this.getUser = function () {
+        this.owner = new User();
+        return this.owner.infoUser();
+    }
 }
+function onClickCar() {
+    let car = new Car;
+    car.info();
+    car.show();
+    car.getUser();
+}
+

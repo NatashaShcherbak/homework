@@ -1,21 +1,18 @@
-function getUser() {
-    function User() {
-        this.name = prompt('Введите Ваше имя');
-        this.age = prompt('Введите Ваш возраст');
-        this.show = function () {
-            if (this.name === '' || this.name === null) {
-                alert('error - имя');
-            } else if (this.age === '' || this.age === null || !isFinite(+this.age) || this.age < 18) {
-                alert('error - возраст');
-            } else {
-                alert(this.name + ' ' + this.age);
-            }
-        }
-        this.info = function () {
-            console.log(this);
-        }
+function User() {
+    this.name = prompt('Введите Ваше имя');
+    this.age = prompt('Введите Ваш возраст');
+    this.checkName = this.name === '' || this.name === null;
+    this.checkAge = this.age === '' || this.age === null || !isFinite(+this.age) || this.age < 18;
+    this.infoUser = function () {
+        if (this.checkName) this.name = 'ERROR';
+        if (this.checkAge) this.age = 'ERROR';
     }
+    this.show = function () {
+        console.log(this);
+    }
+}
+function onClickUser() {
     let user = new User();
+    user.infoUser();
     user.show();
-    user.info();
 }
