@@ -13,8 +13,8 @@ function Car() {
     this.show = function () {
         console.log(this);
     }
-    this.setUser = function () {
-        this.owner = user;
+    this.setUser = function (person) {
+        this.owner = person;
         return this.owner;
     }
 }
@@ -22,6 +22,6 @@ function onClickCar() {
     let car = new Car;
     car.info();
     car.show();
-    car.setUser();
+    car.setUser(user);
 }
 
