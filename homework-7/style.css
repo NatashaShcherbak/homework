@@ -1,0 +1,22 @@
+li {
+    padding: 20px 0;
+}
+.text {
+    width: 50%;
+    background-color: rgb(187, 255, 149);
+}
+.text_orange {
+    background-color: rgb(245, 201, 128);
+}
+table {
+    border-collapse: collapse;
+}
+tr,
+td {
+    border: 1px solid #2D8F1A;
+}
+td {
+    min-width: 20px;
+    padding: 3px 3px;
+    text-align: center;
+}
