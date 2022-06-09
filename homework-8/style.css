@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    min-width: 991px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card {
+    background: #d0b7ee url("img/bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    height: 100vh;
+    min-height: 850px;
+    position: relative;
+}
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__img {
+    background: #6b6b6b url("img/card.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #6b6b6b;
+    padding: 130px 24px 40px;
+    width: 440px;
+    position: absolute;
+}
+.card__num {
+    color: #faac1b;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.card__text {
+    color: #faac1b;
+    font-size: 20px;
+    line-height: 24px;
+}
+.card__text_blue {
+    color: #014ba8;
+}
+.card__text_bold {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.card__data {
+    display: flex;
+}
+.card__form {
+    background-color: #ffffff;
+    padding: 150px 30px 70px;
+    margin: 150px 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+    border-radius: 4%;
+    box-shadow: 0 0 15px #424040;
+}
+.card__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.card__form-text {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #000000;
+    display: block;
+}
+.card__form-input {
+    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #57476b;
+    border: 2px solid #776093;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #776093;
+}
+.card__form-input_s {
+    width: 100px;
+}
+.card__form-input_m {
+    width: 120px;
+    padding-right: 10px;
+}
+input::placeholder {
+    color: rgba(187, 184, 184, 0.85);
+}
+.card__form-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.card__btn {
+    cursor: pointer;
+    font-weight: 700;
+    margin: 10px 10px 0;
+    padding: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #776093;
+    box-shadow: 0 0 4px #6b6b6b;
+    background-color: #776093;
+}
+.card__btn:hover:not(:disabled) {
+    border: 2px solid #014ba8;
+    background-color: #014ba8;
+    transition-duration: 0.6s;
+}
+.card__btn:disabled {
+    cursor: default;
+    border: 2px solid #6b6b6b;
+    background-color: #6b6b6b;
+    box-shadow: none;
+}
+.error {
+    box-shadow: none;
+    border: 2px solid #ff0000;
+}

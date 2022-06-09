@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework</title>
+</head>
+<body>
+    <section class="card">
+        <div class="container card__wrapper">
+            <div class="card__img">
+                <p class="card__num js--img-number">#### #### #### ####</p>
+                <div class="card__info">
+                    <div>
+                        <p class="card__text">Card Holder</p>
+                        <p class="card__text card__text_bold js--img-name">Sara Lykky</p>
+                    </div>
+                    <div>
+                        <p class="card__text card__text_blue">Expires</p>
+                        <div class="card__data">
+                            <p class="card__text card__text_blue card__text_bold js--month">MM/</p>
+                            <p class="card__text card__text_blue card__text_bold js--year">YY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="card__form js--form" action="#">
+                <label class="card__form-wrapper">
+                    <span class="card__form-text">Card Number</span>
+                    <input class="card__form-input js--form-number js--valid" type="text" name="card_number" placeholder="2323343445455656">
+                </label>
+                <label class="card__form-wrapper">
+                    <span class="card__form-text">Card Name</span>
+                    <input class="card__form-input js--form-name js--valid" type="text" name="card_name" placeholder="Sara Lykky">
+                </label>
+                <div class="card__form-item">
+                    <label>
+                        <span class="card__form-text">Expiration Date</span>
+                        <select class="card__form-input card__form-input_m js--form-month js--valid" name="month">
+                            <option>--Month--</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                        <select class="card__form-input card__form-input_m js--form-year js--valid" name="month">
+                            <option>--Year--</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span class="card__form-text">CVV</span>
+                        <input class="card__form-input card__form-input_s js--form-cvv js--valid" type="text" name="cvv" placeholder="123">
+                    </label>
+                </div>
+                <button class="card__btn card__text js--btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
