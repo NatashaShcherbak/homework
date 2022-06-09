@@ -10,8 +10,8 @@ function formValidate() {
     btn.setAttribute('disabled', 'disabled');
 
     const inputs = document.querySelectorAll('.js--valid');
-    inputs.forEach((item) => {
-        item.setAttribute('is-valid', '0');
+    inputs.forEach((el) => {
+        el.setAttribute('is-valid', '0');
     });
 
     let check;
@@ -65,8 +65,8 @@ function formValidate() {
 
     function checkValid() {
         const isAllValid = [];
-        inputs.forEach((item) => {
-            isAllValid.push(item.getAttribute('is-valid'));
+        inputs.forEach((el) => {
+            isAllValid.push(el.getAttribute('is-valid'));
         })
         const isValid = (element) => {
             return element === '0'
@@ -82,6 +82,7 @@ function formValidate() {
         e.preventDefault();
         let userInfo = Array.from(inputs).map(item => item.name + ': ' + item.value);
         console.log(userInfo);
+        form.reset();
     });
 }
 formValidate();
