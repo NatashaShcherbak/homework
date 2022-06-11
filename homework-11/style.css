@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: "Georgia", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #0526a1;
+    min-width: 991px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.form {
+    padding: 50px 0 20px;
+    width: 200px;
+}
+.form__input {
+    margin: 10px 0 0;
+    padding: 2px 5px;
+    display: block;
+    font-family: "Georgia", serif;
+    font-size: 16px;
+    border: 2px solid #0526a1;
+    border-radius: 5px;
+}
+.form__input:focus-visible {
+    border: 2px solid #319cd3;
+    outline: none;
+}
+.list {
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 2px 0;
+}
