@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/script.js",
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "babel _babel/src -d _babel/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
