@@ -27,8 +27,6 @@ function Tasks(input, todosWrapper) {
     this.complete = async function (description, id, item) {
         try {
             const checkBox = item.querySelector('.js--complete');
-            const textDesc = item.querySelector('.js--desc');
-            checkBox.checked ? textDesc.style.textDecoration = 'line-through' : textDesc.style.textDecoration = 'none';
             const response = await fetch(`http://localhost:3000/todos/${id}`, {
                 method: "PUT",
                 headers: {
@@ -40,19 +38,23 @@ function Tasks(input, todosWrapper) {
                     "checked": checkBox.checked,
                 })
             })
-            await response.json();
+            if(response.status === 200) {
+                const textDesc = item.querySelector('.js--desc');
+                checkBox.checked ? textDesc.style.textDecoration = 'line-through' : textDesc.style.textDecoration = 'none';
+            }
         } catch (error) {
             console.log(error);
         }
     }
 
     this.delete = async function(id, item) {
-        item.remove();
         try {
             const response = await fetch(`http://localhost:3000/todos/${id}`, {
                 method: "DELETE"
             })
-            await response.json();
+            if(response.status === 200) {
+                item.remove();
+            }
         } catch (error) {
             console.log(error);
         }
