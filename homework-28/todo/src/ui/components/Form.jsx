@@ -1,29 +1,23 @@
-import { v4 } from "uuid";
+import { useDispatch } from "react-redux";
 
-import { useDispatch, useSelector } from "react-redux";
-
-import { setItem } from "../../engine/core/todo/slice";
-import Selectors from "../../engine/core/todo/selectors";
+import { handleAdd } from "../../engine/core/todo/thunk";
 
 import Button from "./Button";
 import Input from "./Form/Input";
 
 function Form() {
     const dispatch = useDispatch();
-    const items = useSelector(Selectors.items);
 
-    const handleAdd = (event) => {
+    const addItem = (event) => {
         event.preventDefault();
-        const newItem = [{id: v4(), description: event.target.description.value}, ...items];
-        dispatch(setItem(newItem));
-        localStorage.setItem("items", JSON.stringify(newItem));
+        dispatch(handleAdd(event.target.description.value));
         event.target.description.value = '';
     };
 
     return (
-        <form action="#" className="todo__item" onSubmit={handleAdd}>
+        <form action="#" className="todo__item" onSubmit={addItem}>
             <Input />
-            <Button text="Add"/>
+            <Button text="Add" />
         </form>
     )
 }

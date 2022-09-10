@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 import Selectors from "../../engine/core/todo/selectors";
-import {setItem} from "../../engine/core/todo/slice";
+import { setItem } from "../../engine/core/todo/slice";
 
 import Form from "../components/Form";
 import Items from "../components/Items";
@@ -27,6 +27,7 @@ function Wrapper() {
                     key={item.id}
                     id={item.id}
                     description={item.description}
+                    checked={item.checked}
                 />
             ))}
             <Footer />

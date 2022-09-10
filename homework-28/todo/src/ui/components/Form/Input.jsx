@@ -1,12 +1,14 @@
-function Input() {
+function Input({ value, onChange }) {
     return (
-        <label className="todo__label">
+        <div className="todo__label">
             <input type="text"
                    name="description"
                    className="todo__input"
                    placeholder="Your task ..."
+                   defaultValue={value}
+                   onChange={onChange}
             />
-        </label>
+        </div>
     )
 }
 

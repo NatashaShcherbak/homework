@@ -48,6 +48,16 @@ body {
     flex-direction: row;
     padding: 12px 0;
 }
+.todo__item-edit {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 0;
+}
+.todo__item-edit .todo__label {
+    padding: 0;
+    margin-right: 4px;
+}
+
 .todo__label {
     width: 100%;
     padding: 0 0 8px;
@@ -59,6 +69,9 @@ body {
     border-radius: 12px;
     padding: 8px 16px;
     box-shadow: 0 0 6px var(--light-gray);
+}
+.todo__item-edit .todo__input {
+    padding: 10px 16px;
 }
 .todo__btn {
     cursor: pointer;
@@ -78,6 +91,10 @@ body {
     background: var(--deep-pink);
     transition-duration: 0.3s;
 }
+.todo__item_row .todo__btn,
+.todo__item-edit .todo__btn {
+    margin-left: 6px;
+}
 .todo__row {
     width: 100%;
     display: flex;
@@ -85,7 +102,7 @@ body {
     background: white;
     padding: 8px 16px;
     border-radius: 12px;
-    margin-right: 8px;
+    margin-right: 4px;
 }
 .todo__text {
     font-size: 18px;
