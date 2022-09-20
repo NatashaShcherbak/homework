@@ -1,12 +1,8 @@
 :root {
     --deep-pink: #ff1493;
-    --orange-text: #e9967a;
     --orange: #ffc402;
     --yellow: #ffff00;
-    --light-gray: #d3d3d3;
     --gray: #a9a9a9;
-    --gray-shadow: #6e6d6d;
-    --black: #0e0e0e;
 }
 * {
     box-sizing: border-box;
@@ -20,106 +16,20 @@ body {
     background: var(--gray);
 }
 .container {
-    max-width: 1200px;
+    max-width: 660px;
     margin: 0 auto;
     padding: 0 14px;
 }
 .todo {
-    padding: 60px 0;
+    padding: 40px 14px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .todo__title {
-    font-size: 52px;
-    letter-spacing: 3px;
+    font-size: 78px;
+    letter-spacing: 4px;
     color: var(--deep-pink);
     text-shadow: 8px -8px 0 var(--orange), 16px -16px 0 var(--yellow);
     padding: 20px 0;
-}
-.todo__item {
-    width: 80%;
-    max-width: 660px;
-    display: flex;
-    flex-direction: column;
-    padding: 12px 0 20px;
-}
-.todo__item_row {
-    flex-direction: row;
-    padding: 12px 0;
-}
-.todo__item-edit {
-    flex-direction: row;
-    align-items: center;
-    padding: 12px 0;
-}
-.todo__item-edit .todo__label {
-    padding: 0;
-    margin-right: 4px;
-}
-
-.todo__label {
-    width: 100%;
-    padding: 0 0 8px;
-}
-.todo__input {
-    font-size: 18px;
-    width: 100%;
-    border: none;
-    border-radius: 12px;
-    padding: 8px 16px;
-    box-shadow: 0 0 6px var(--light-gray);
-}
-.todo__item-edit .todo__input {
-    padding: 10px 16px;
-}
-.todo__btn {
-    cursor: pointer;
-    align-self: center;
-    min-width: 72px;
-    padding: 12px;
-    border-radius: 20px;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--orange-text);
-    background: var(--yellow);
-    box-shadow: 0 0 6px var(--gray-shadow);
-}
-.todo__btn:hover {
-    color: var(--orange);
-    background: var(--deep-pink);
-    transition-duration: 0.3s;
-}
-.todo__item_row .todo__btn,
-.todo__item-edit .todo__btn {
-    margin-left: 6px;
-}
-.todo__row {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 8px 16px;
-    border-radius: 12px;
-    margin-right: 4px;
-}
-.todo__text {
-    font-size: 18px;
-    padding-left: 12px;
-    color: var(--black);
-}
-.todo__footer {
-    width: 80%;
-    max-width: 660px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-.todo__footer-text {
-    font-size: 22px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--deep-pink);
 }

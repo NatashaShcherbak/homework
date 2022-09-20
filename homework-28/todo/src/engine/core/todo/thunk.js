@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-import { setItem, editItem } from "./slice";
+import { setItem, editItem, setSearch } from "./slice";
 
 export const handleAdd = (description) => (dispatch, getState) => {
     if(description !== '') {
@@ -24,9 +24,7 @@ export const handleUpdate = (id, description, checked) => (dispatch, getState) =
     dispatch(editItem(null));
 };
 
-export const handleEdit = (id) => (dispatch) => {
-    dispatch(editItem(id));
-};
+export const handleEdit = (id) => (dispatch) => dispatch(editItem(id));
 
 export const handleCancel = (id, description) => (dispatch, getState) => {
     const items = getState().todo.items;
@@ -48,8 +46,11 @@ export const handleDelete = (id) => (dispatch, getState) => {
     localStorage.setItem('items', JSON.stringify(deleteItem));
 };
 
-export const handleAllDelete = () => (dispatch) => {
-    dispatch(setItem([]));
-    localStorage.setItem('items', JSON.stringify([]));
+export const handleAllDelete = (array) => (dispatch, getState) => {
+    const items = getState().todo.items;
+    const newItems = items.filter(item => !array.includes(item));
+    dispatch(setItem(newItems));
+    localStorage.setItem('items', JSON.stringify(newItems));
+    dispatch(setSearch(undefined));
 };
 
